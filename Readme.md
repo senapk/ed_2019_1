@@ -13,3 +13,9 @@
     - resolver problemas com ED
         - c++ - muito complexa - sabre de luz
         - https://www.learncpp.com
+
+## s01e02
+- criar uma conta no moodle
+- começar a estudar c++
+- criar uma conta no github.
+

@@ -3,6 +3,14 @@
 
 const int MORTO = 0;
 
+//acha o proximo elemento vivo a partir de inicio + 1
+int achar_vivo(int vet[], int size, int inicio){
+    int pos = (inicio + 1) % size;
+    while(vet[pos] == MORTO)
+        pos = (pos + 1) % size;
+    return pos;
+}
+
 void mostrar_vetor(int vet[], int size){
     printf("[");
     bool eh_o_primeiro = true;
@@ -26,9 +34,20 @@ int main(){
         vet[i] = i + 1;
     int esc = 0; //o escolhido
     scanf("%d", &esc);
+    esc = esc - 1;
     mostrar_vetor(vet, size);
-
+    int qtd = size - 1;
+    while(qtd--){
+        int vai_morrer = achar_vivo(vet, size, esc);
+        vet[vai_morrer] = 0;
+        esc = achar_vivo(vet, size, vai_morrer);
+        mostrar_vetor(vet, size);
+    }
 }
+
+
+
+
 
 /* leia n
 criar um vetor de "pessoas" tamanho n
