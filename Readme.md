@@ -1,3 +1,6 @@
+## Links
+- [Monitoria ED Whatsapp](https://chat.whatsapp.com/7jENvA7CcMjE27zedcAJcK)
+
 ## s01e01 - Apresentação
 - presença
 - valores
@@ -19,3 +22,10 @@
 - começar a estudar c++
 - criar uma conta no github.
 
+## s02e01
+- Estudar o decaptar
+- Fazer o decaptar 2
+
+## s02e02
+- Estudar a queimada
+- Fazer o labirinto
