@@ -2,7 +2,15 @@
 
 const char TREE = '#';
 const char FIRE = 'o';
-const char EMPTY = '.'; 
+const char EMPTY = '.';
+const int NLADOS = 4;
+
+typedef struct{
+    int l;
+    int c;
+} Pos;
+
+#define fill_neibs(l, c) {{l, c - 1}, {l - 1, c}, {l, c + 1}, {l + 1, c}}
 
 void show(int nl, int nc, char mat[nl][nc]){
     for(int l = 0; l < nl; l++){
@@ -18,10 +26,9 @@ void tocar_fogo(int nl, int nc, char mat[nl][nc], int l, int c){
     if(mat[l][c] != TREE)
         return;
     mat[l][c] = FIRE;
-    tocar_fogo(nl, nc, mat, l, c + 1);
-    tocar_fogo(nl, nc, mat, l, c - 1);
-    tocar_fogo(nl, nc, mat, l - 1, c);
-    tocar_fogo(nl, nc, mat, l + 1, c);
+    Pos neibs[NLADOS] = fill_neibs(l, c);
+    for(int i = 0; i < NLADOS; ++i)
+        tocar_fogo(nl, nc, mat, neibs[i].l, neibs[i].c);
 }
 
 int main(){

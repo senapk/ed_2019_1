@@ -1,6 +1,7 @@
 ## Links
 - [Monitoria ED Whatsapp](https://chat.whatsapp.com/7jENvA7CcMjE27zedcAJcK)
 - [Repositório Git Exemplo](https://github.com/senapk/exemplo_repositorio_disciplina)
+- [Coloque seu repositorio](https://docs.google.com/spreadsheets/d/183SjgFljjI5CpR7VW_t6gIsB4iwprrwAL3hScYRgkI4/edit#gid=0)
 
 ## s01e01 - Apresentação
 - presença
