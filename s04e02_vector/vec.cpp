@@ -18,8 +18,12 @@ struct Vector{
         delete [] this->data;
     }
     void push_back(Elem value){
-        if(this->size == this->capacity)
-            resize(this->capacity * 2);
+        if(this->size == this->capacity){
+            if(this->size == 0)
+                resize(1);
+            else    
+                resize(this->capacity * 2);
+        }
         this->data[this->size] = value;
         this->size += 1;
     }
@@ -38,41 +42,72 @@ struct Vector{
     }
 
     void show(){
-        printf("[ ");
+        printf("%02d/%02d[ ", this->size, this->capacity);
         for(int i = 0; i < this->size; i++){
-            cout << this->data[i];
+            cout << this->data[i] << " ";
         }
-        printf("] %d/%d\n", this->size, this->capacity);
+        printf("]\n");
+    }
+
+    void insert(int index, int valor){
+        if((index < 0) || (index > this->size)){
+            return;
+        }
+        if(this->capacity == this->size){
+            this->resize(this->capacity * 2);
+        }
+
+        for(int i = this->size; i >= index; i--){
+            this->data[i + 1] = this->data[i]; 
+        }
+        this->data[index] = valor;
+        this->size++;
+    }
+    void remove(int index){
+        if((index < 0) || (index >= this->size)){
+            return;
+        }
+        for(int i = index; i < this->size - 1; i++){
+            this->data[i] = this->data[i+1];
+            
+        }
+        this->size--;
+    }
+
+    void remove_all(int value){
+        for(int i = this->size - 1; i >= 0; --i){
+            if(this->data[i] == value)
+                this->remove(i);
+        }
     }
 };
 
+#include <sstream> //stringstream
 
 int main(){
-    Vector<string> nomes(3);
-    nomes.push_back("oi");
-    nomes.push_back("tim");
-
-
-
-    Vector<int> vec(1);
-    vec.show();
-    vec.push_back(4);
-    vec.show();
-    vec.push_back(4);
-    vec.show();
-    vec.push_back(6);
-    vec.show();
-    vec.push_back(1);
-    vec.show();
-    vec.push_back(2);
-    vec.show();
-    vec.push_back(3);
-    vec.show();
-    vec.push_back(8);
-    vec.show();
-    vec.push_back(9);
-    vec.show();
-
+    Vector<int> vet(0);
+    while(true){
+        string line, cmd;
+        getline(cin, line);
+        stringstream ui(line);
+        ui >> cmd;
+        if(cmd == "end")
+            break;
+        else if(cmd == "add"){
+            int value;
+            while(ui >> value){
+                vet.push_back(value);
+            }
+        }else if(cmd == "show"){
+            vet.show();
+        }else if(cmd == "remove_all"){
+            int value;
+            ui >> value;
+            vet.remove_all(value);
+        }else{
+            cout << "fail: comando invalido\n";
+        }
+    }
 }
 
 /* struct Pessoa{
