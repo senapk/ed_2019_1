@@ -61,19 +61,23 @@ void show_ord(Node * node){
     show(menor, node);
 }
 
-int main(){
+int main(int argc, char * argv[]){
+    if(argc == 1){
+        std::cout << "Passe o tamanho por argumento\n";
+        exit(1); 
+    }
     Node * lista = nullptr;
     show(lista);
     lista = new Node(0);
-    show(lista);
-
-    for(int i = 1; i < 10; i++)
+    //show(lista);
+    int size = atoi(argv[1]);
+    for(int i = 1; i < size; i++)
         insert_left(lista, i);
-    show(lista, lista);
+    //show(lista, lista);
     while(lista->next != lista){
         remove_right(lista);
         lista = lista->next;
-        show_ord(lista);
+        //show_ord(lista);
     }
     show(lista);
 }
