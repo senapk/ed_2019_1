@@ -5,6 +5,7 @@
 
 #define SUAPI(a, b, tipo) do{tipo SUAPI = a; a = b; b = SUAPI;}while(0)
 
+//quick intervalo fechado
 void quick_sort(int vet[], int A, int B){
     if(B <= A)
         return;
@@ -14,7 +15,7 @@ void quick_sort(int vet[], int A, int B){
     while(i <= j){
         while((vet[i] < pivo) && (i <= j))
             i++;
-        while((vet[j] > pivo) && (j >= i))
+        while((vet[j] > pivo) && (i <= j))
             j--;
         if(i <= j){
             SUAPI(vet[i], vet[j], int);
@@ -53,6 +54,6 @@ int main(){
         quick_sort(vet, 0, size - 1);
         //show_vet(vet, size);
         if(!verify(vet, size))
-            printf("%d", k);
+            printf("%d ", k);
     }
 }
