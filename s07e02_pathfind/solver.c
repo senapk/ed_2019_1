@@ -34,6 +34,7 @@ void pintar(int nl, int nc, char mat[nl][nc],
 int main(){
     int nl = 20, nc = 20;
     xmat_init(nl, nc);
+    xs_jump(0);
     char mat[nl][nc];
     char *p = &mat[0][0];
     const char * color = "rgb";
