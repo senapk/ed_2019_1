@@ -1,0 +1,5 @@
+init 6
+show
+add 12 13 1 15
+show
+end

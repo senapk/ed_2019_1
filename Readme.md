@@ -1,3 +1,19 @@
+## Atividades
+- 01. Princesa
+- 02. Queimada
+- 03. Labirinto (Criar e resolver com recursão)
+- 04. Fractais
+- 05. Princesa com lista circular
+- 06. Ordenação (selection, insertion, bubble)
+- 07. Pathfinding
+- 08. Banco (simulação e otimização) 
+    - banco: https://github.com/qxcodeed/arcade/blob/master/base/0024/Readme.md#qxcode
+- 09. Editor (modo texto ou visual)
+    - texto: https://github.com/qxcodeed/arcade/blob/master/base/0023/Readme.md#qxcode
+    - visual: https://github.com/qxcodeed/editor
+
+
+
 ## Links
 - [Monitoria ED Whatsapp](https://chat.whatsapp.com/7jENvA7CcMjE27zedcAJcK)
 - [Repositório Git Exemplo](https://github.com/senapk/exemplo_repositorio_disciplina)
