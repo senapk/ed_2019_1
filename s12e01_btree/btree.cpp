@@ -66,10 +66,10 @@ struct BTree{
 
     void _show(Node * node, int nivel){
         if(node == nullptr){
-            cout << string(2 * nivel, ' ') << "#\n";
+            cout << string(nivel, '.') << "#\n";
             return;
         }
-        cout << string(2 * nivel, ' ') << node->value << "\n";
+        cout << string(nivel, '.') << node->value << "\n";
         if(node->left == nullptr && node->right == nullptr)
             return;
         _show(node->left, nivel + 1);
@@ -114,12 +114,21 @@ struct BTree{
 
 
 
-int main(){
+int main(int argc, char * argv[]){
+    if(argc < 2){
+        puts("./exec numero_de_nos");
+        exit(1);
+    }
+    int nos;
+    stringstream(argv[1]) >> nos;
     BTree bt;
     srand(time(NULL));
-    for(int i = 0; i < 10; i++)
+    for(int i = 0; i < nos; i++)
         bt.gambinsert(rand() % 10);
 
+    puts(">>>>>>>>");
     cout << bt.serialize() << "\n";
-    bt.bshow();
+    puts("========");
+    bt.show();
+    puts("<<<<<<<<");
 }
