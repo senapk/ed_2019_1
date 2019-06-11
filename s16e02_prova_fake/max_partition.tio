@@ -1,0 +1,30 @@
+>>>>>>>>
+2 8
+aaaaaaaa
+aaaaaabb
+========
+********
+******bb
+<<<<<<<<
+
+>>>>>>>>
+2 8
+aacccaaa
+aaacaaab
+========
+aaccc***
+aaac***b
+<<<<<<<<
+
+>>>>>>>>
+4 8
+aacccaaa
+aaacaabb
+aacccaaa
+aaacaaba
+========
+**cccaaa
+***caabb
+**cccaaa
+***caaba
+<<<<<<<<

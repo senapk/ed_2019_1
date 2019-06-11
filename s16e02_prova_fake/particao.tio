@@ -1,0 +1,25 @@
+>>>>>>>>
+2 8
+aaaaaaaa
+aaaaaabb
+========
+2
+<<<<<<<<
+
+>>>>>>>>
+2 8
+aacccaaa
+aaacaabb
+========
+4
+<<<<<<<<
+
+>>>>>>>>
+4 8
+aacccaaa
+aaacaabb
+aacccaaa
+aaacaaba
+========
+5
+<<<<<<<<
